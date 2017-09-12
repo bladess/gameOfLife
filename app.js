@@ -98,6 +98,7 @@ var deplacementFourmi = function (x, y, tabDep) {
 }
 
 createTable(col, row);
+
 addFourmis(nbFourmis, 'R', row, col);
 addFourmis(nbFourmis, 'N', row, col);
 // tab[3][4]="R";
