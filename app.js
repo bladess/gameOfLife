@@ -109,8 +109,11 @@ console.log(tab);
 //deplacementFourmi(3,4,[0,1]);
 //console.log(tab);
 //console.log(tab);
+
+//main program
 window.setInterval(function () {
     var tabFour = [];
+    var tabArrive = [];
     for (var i = 0; i < row; i++) {
         for (var j = 0; j < col; j++) {
             if (tab[i][j] !== 0) {
@@ -118,8 +121,18 @@ window.setInterval(function () {
             }
         }
     }
-    for(var i = 0; i<tabFour.length;i++){
-        
-    }
 
-}, 2000)
+    
+    for (var i = 0; i < tabFour.length; i++) {
+        var x = tabFour[i][0];
+        var y = tabFour[i][1];
+        var tabDep = checkDeplacement(x, y, row, col);
+        if (!tabArrive.includes([x,y])) {
+            var result = deplacementFourmi(x, y, tabDep[getRandomInt(0, tabDep.length)]);           
+            if(result !==0){
+                tabArrive.push(result);        
+            }
+        }
+    }
+    console.log(tabArrive);
+}, 10000);
