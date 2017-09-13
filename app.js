@@ -1,6 +1,6 @@
 var row = 10;
 var col = 10;
-var nbFourmis = 10;
+var nbFourmis = 20;
 var tab = [];
 
 
@@ -8,7 +8,7 @@ var tab = [];
 
 for (var i = 0; i < row; i++) {
     tab.push(Array(col).fill(0));
-}
+}   
 
 //console.log(tab);
 //verifie les deplacements possible pour une coordonnées precise
@@ -136,4 +136,4 @@ window.setInterval(function () {
         }
     }
     console.log(tabArrive);
-}, 10000);
+}, 5000);
